@@ -70,5 +70,4 @@ c- ¿Qué comando o serie de comandos utilizaría para subir todos los contenido
 
 d- Si una instancia de Redshift utilizada para reporting se está quedando sin espacio y se impone la necesidad de sacar algunos datos antiguos de la base, pero a pesar de que los datos de más de seis meses de antigüedad no se utilicen para reporting, se los requiere para entrenar y validar modelos predictivos, además de hacer algunos análisis ad-hoc en SQL a un precio razonable considerando tanto infraestructura como costos de consultas ¿Que tipo de solución propondría para poder consultar los datos usando servicios cloud en AWS? 
 
-Formatos de entrega válidos
 
