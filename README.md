@@ -1,15 +1,15 @@
 # Test
 A - Generar una tabla, con el listado de todos los Movimientos, con el siguiente contenido :
 
-. Fecha
-. Descripción de Cliente
-. Descripción de Proveedor
-. Descripción de Producto
-. Descripcion de Marca
-. Cantidad
-. Costo
-. Venta
-. Ganancia Neta
+Fecha
+Descripción de Cliente
+Descripción de Proveedor
+Descripción de Producto
+Descripcion de Marca
+Cantidad
+Costo
+Venta
+Ganancia Neta
 
 ```SQL
 CREATE TABLE MOVIMIENTOS AS Select  M.Fecha, , C.Descripcion, V.Descripcion , N.descripcion,  M.cantidad, 
