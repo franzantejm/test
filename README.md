@@ -12,7 +12,8 @@ A - Generar una tabla, con el listado de todos los Movimientos, con el siguiente
 . Ganancia Neta
 
 ```SQL
-CREATE TABLE MOVIMIENTOS AS Select  M.Fecha, , C.Descripcion, V.Descripcion , N.descripcion,  M.cantidad, M.Costo, M.venta, (M.venta – M.costo) as gananciaNeta FROM data_movimientos M 
+CREATE TABLE MOVIMIENTOS AS Select  M.Fecha, , C.Descripcion, V.Descripcion , N.descripcion,  M.cantidad, 
+M.Costo, M.venta, (M.venta – M.costo) as gananciaNeta FROM data_movimientos M 
 JOIN  data_clientes C
 ON M.cod_cliente = C..cod_cliente
 JOIN data_productos P
