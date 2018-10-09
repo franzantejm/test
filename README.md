@@ -12,17 +12,17 @@ Venta
 Ganancia Neta
 
 ```SQL
-CREATE TABLE MOVIMIENTOS AS Select  M.Fecha, , C.Descripcion, V.Descripcion , N.descripcion,  M.cantidad, 
+CREATE TABLE MOVIMIENTOS AS Select  M.Fecha, C.Descripcion, V.Descripcion , N.descripcion,  M.cantidad, 
 M.Costo, M.venta, (M.venta – M.costo) as gananciaNeta FROM data_movimientos M 
 JOIN  data_clientes C
-ON M.cod_cliente = C..cod_cliente
+ON M.cod_cliente = C.cod_cliente
 JOIN data_productos P
 ON M.cod_prod = P.cod_prod
 JOIN data_proveedores  V
-On  P.cod_proveedor = V. cod_proveedor
+On  P.cod_proveedor = V.cod_proveedor
 JOIN data_marcas N
 On P.cod_marca = N.cod_marca
- 
+ ;
 ```
 
 
@@ -35,7 +35,7 @@ JOIN data_productos P
 ON N.cod_marca = P.cod_marca 
 
 LEFT JOIN data_movimientos M
-On P.cod_prod = M.cod_prod
+On P.cod_prod = M.cod_prod;
 ```
 
 # c- En base a la tabla generada en a, consultar,  ordenando por fecha y descripción del cliente:
@@ -45,6 +45,22 @@ On P.cod_prod = M.cod_prod
 . Ganancia Neta Acumulada en las últimas 7 operaciones
 
 La idea del punto c es, dado un cliente y una fecha de operación, mostrar la sumatoria de las ganancias derivadas de las últimas siete operaciones que haya realizado.
+
+
+```SQL
+Select  M.Fecha, , C.Descripcion, (M.venta – M.costo) as gananciaNeta 
+FROM data_movimientos M 
+
+JOIN  data_clientes C
+ON M.cod_cliente = C.cod_cliente
+
+where c.cod_cliente= 'ID CLIENTE A BUSCAR' and m.fecha = 'fecha operacion a buscar'
+group by M.Fecha, C.Descripcion
+order by M.Fecha
+LIMIT 7;
+
+
+```
 
 # Ejercicio 2 - Algo de Python (Para hacerlo interesante, usar Python 2.7)
 
