@@ -107,6 +107,6 @@ donde SOURCE_DIR es el directorio que quiero subir y DEST_BUCKET el destino
 
 # d- Si una instancia de Redshift utilizada para reporting se está quedando sin espacio y se impone la necesidad de sacar algunos datos antiguos de la base, pero a pesar de que los datos de más de seis meses de antigüedad no se utilicen para reporting, se los requiere para entrenar y validar modelos predictivos, además de hacer algunos análisis ad-hoc en SQL a un precio razonable considerando tanto infraestructura como costos de consultas ¿Que tipo de solución propondría para poder consultar los datos usando servicios cloud en AWS? 
 
-Agregaria un cluster Redshitft mas que maneje data historica y tenga como finalidad servir de datos a los procesos de Data Science. Utilizando la misma base de S3 para no replicar datos. O com alternativa se podrian agregar nodos al cluster que ya se tiene.
+
 
 
