@@ -28,7 +28,15 @@ On P.cod_marca = N.cod_marca
 
 b- Mostrar un listado de todas las Marcas que no tuvieron Ventas.
 
+```SQL
+Select  N.descripcion FROM DATA_MARCAS N 
 
+JOIN data_productos P
+ON N.cod_marca = P.cod_marca 
+
+LEFT JOIN data_movimientos M
+On P.cod_prod = M.cod_prod
+```
 
 c- En base a la tabla generada en a, consultar,  ordenando por fecha y descripción del cliente:
 
